@@ -17,14 +17,16 @@ from io import BytesIO
 from os import listdir
 from os.path import isfile, join
 
+
 date = input('date(format 11-5-2017): ')
 p = int(input('number of pages you want to download: '))
+root_dirInput = input('where would you like to save the pages? (enter dir): ')
 
 e = 0
 extensions = [ '.gif', '.jpg', '.jpeg', '.tiff', '.png', '.bmp']
 ext = extensions[e]
 
-root_dir = '/Users/marilenedacosta/Dropbox/html/spidNews'+str(date)
+root_dir = root_dirInput +str(date)
 if os.path.isdir(root_dir) != True:
     os.makedirs(root_dir)
 
